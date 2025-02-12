@@ -1,0 +1,120 @@
+
+asList() method in Arrays class used convert array into List.
+   
+=> Arrays is  class from java.util package which used perform operations sort, binarsearch, copiying on array objects
+=> Also using toString() from Arrays class we can convert array object into Strings.\
+06-01-2025:
+==========
+jvm uses instanceOf operator to know  object is serializable object or not.
+
+InterThreadCommunication => means threads communicating internally.
+10-01-2025:
+=========
+Immutable class:
+Rules:
+1.class must be final
+2.variables private and final
+3.default constructor with parameterized
+4. decale getter methods
+
+defency copy:
+==========
+Defensive Copying is a programming technique used in Java to prevent unintended modifications to an object's internal state by creating copies of mutable objects when they are returned or passed to methods. This technique helps maintain immutability and encapsulation, reducing the risk of bugs and security issues.
+
+"var" keyword in java-10:
+===================
+In Java, the var keyword is used for local variable type inference, meaning the compiler determines the type of the variable at compile-time based on the assigned value. Introduced in Java 10, var simplifies code by reducing redundancy while maintaining strong type safety.
+
+Example:
+=======
+public class VarExample {
+    public static void main(String[] args) {
+        // Using var for different data types
+        var message = "Hello, Java 10!"; // Inferred as String
+        var number = 10;                 // Inferred as int
+        var decimal = 10.5;              // Inferred as double
+        var list = java.util.List.of("Apple", "Banana", "Cherry"); // Inferred as List<String
+}
+
+not used in places:
+Works Only for Local Variables – Cannot be used for fields, method parameters, or return types.
+
+Jira, Bitbucket,Confluence,Jfrog
+Confluence: is like book having documents
+Glocery:which contain terminologies using proejcts
+CodeWalkThrough-knowing project internals for asking team leads or seniour team memebers :
+Jfrog:
+ 
+I want to  shadowing to another person:
+F5->get into method
+F6-> line by by execution 
+
+F7->moving to next break point
+
+passitive testing
+negative testing
+edge cases
+
+functional Testing:
+1.Unit Testing
+2.Integration Testing
+3.System Testing
+4.User Acceptance Testing
+
+Non-functional testing:
+1.JMeter
+2.load
+3.scalability
+4.stress
+5.spike testing
+6.security Testing
+
+Junit:
+  @BeforeEach 
+  @AfterEach
+  @BeforeAll
+
+
+   @AfterAll
+   @Test
+
+records can not extended because record already extended to Record class.
+
+
+==========================================
+Exception Hamdling:
+===========
+Error in java serious and unrecoverble issue that occurs during the execution program.
+Example:
+OutOfMemoryError – Happens when the JVM runs out of memory.
+StackOverflowError – Occurs due to deep or infinite recursion
+
+Exception:
+ 1.Checked or Compile time Exception.
+     ex:IOException,SQLException
+ 2.UnChecked Exception:
+    ex.NullPointerException,ArithmeticException,arrayindexoutofboundsexception
+   
+    when we have the multiple exceptions  statements in try block    then catch block should handle
+    from child to parent.
+exampe:
+    try{
+       int  a=10/0;
+       sysout(a); //ArithmeticException
+      int num[]={10,20,30};
+      sysout(num[5]); //ArrayIndexOutofBoundsException
+      }
+ catch(ArithmeticException ae){
+          ae.printStackTrace();
+} 
+catch(ArrayIndexOutofBoundsException aie){
+          ae.printStackTrace();
+}catch(Exception e) {
+       sysout("Other error:"+e.getMessage);
+} 
+
+=>only try not allowed
+=>try with catch allowed
+=>try with finally allowed without catch also.     
+
+
