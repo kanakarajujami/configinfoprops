@@ -1,3 +1,6 @@
+Order of access modifiers: 
+====================
+=>public, protected, default, and private.
 
 asList() method in Arrays class used convert array into List.
    
@@ -63,10 +66,19 @@ functional Testing:
 
 Non-functional testing:
 1.JMeter
-2.load
-3.scalability
-4.stress
-5.spike testing
+2.load:
+=====
+Load Testing is a type of performance testing that evaluates how a system behaves under an expected workload.
+
+3.scalability:
+=========
+Scalability Testing is a type of performance testing that evaluates how well a system, application, or network can scale up or down in response to increasing or decreasing workloads.
+
+4.stress:
+======
+5.spike testing:
+===========
+Spike Testing is a type of performance testing that evaluates how a system handles sudden and extreme variations in load.
 6.security Testing
 
 Junit:
@@ -86,18 +98,33 @@ Exception Hamdling:
 ===========
 Error in java serious and unrecoverble issue that occurs during the execution program.
 Example:
+======
 OutOfMemoryError – Happens when the JVM runs out of memory.
 StackOverflowError – Occurs due to deep or infinite recursion
 
 Exception:
  1.Checked or Compile time Exception.
-     ex:IOException,SQLException
+  Checked exceptions are checked by the compiler at compile-time
+   example:
+   ======
+    IOException → Occurs when there is an issue with Input/Output operations (e.g., file not found).
+    SQLException → Occurs when working with databases.
+   InterruptedException → Occurs when a thread is interrupted.
+   FileNotFoundException → Occurs when a file is not found
+
  2.UnChecked Exception:
-    ex.NullPointerException,ArithmeticException,arrayindexoutofboundsexception
+    Unchecked exceptions are not checked at compile-time
+Example:
+======
+    ArithmeticException → Occurs when dividing by zero (10 / 0).
+   NullPointerException → Occurs when accessing a null object.
+   ArrayIndexOutOfBoundsException → Occurs when accessing an array index that does not exist.
+   IllegalArgumentException → Occurs when an illegal argument is passed to a method.
    
     when we have the multiple exceptions  statements in try block    then catch block should handle
     from child to parent.
 exampe:
+=====
     try{
        int  a=10/0;
        sysout(a); //ArithmeticException
@@ -115,6 +142,34 @@ catch(ArrayIndexOutofBoundsException aie){
 
 =>only try not allowed
 =>try with catch allowed
-=>try with finally allowed without catch also.     
+=>try with finally allowed without catch also.   
+
+=> In Java, the try-with-resources statement is used to automatically close resources like files, database connections.but every resource must me implemented to AutoCloseable interface that why try with resource closed open resources automatically.
+
+   Example: FileReader and FileInputStream are automatically implemented from AutoCloseable                             interface.
+    try(BufferReader reader=new BufferReader(new FileReader("file.txt"))){
+             //statements
+          }
+15-02-2025:
+=========
+package is a collection of classes and interfaces that hepl orginze the code in structured way.
+
+Character Class:
+=============
+isDigit()=> this method is used to check charcter is digit or not:
+
+char c='2';
+sysout(Character.isDigit(c)); ->true
+
+isChar() or isLetter()=>this method is used to check charatcer or not.
+
+char c='a';
+sysout(Character.isDigit(c)); ->true
+
+
+
+
+
+
 
 
